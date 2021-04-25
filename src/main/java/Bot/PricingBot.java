@@ -12,10 +12,10 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 
-public class JdingBot extends TelegramLongPollingBot {
+public class PricingBot extends TelegramLongPollingBot {
 
     private String botUsername = "sloth_announcement_bot";
-    private String botToken = "";
+    private String botToken = "1799355002:AAHsERK4346yaXXGwDyiqGMsp3HJ_Uw1gSg";
 
     public String getBotUsername() {
         return botUsername;
@@ -24,7 +24,6 @@ public class JdingBot extends TelegramLongPollingBot {
     public String getBotToken() {
         return botToken;
     }
-
 
     public void onUpdateReceived(Update update) {
         MessageGenerator m = new MessageGenerator();
@@ -49,8 +48,6 @@ public class JdingBot extends TelegramLongPollingBot {
                     e.printStackTrace();
                 }
             });
-
-
         }
     }
 }
