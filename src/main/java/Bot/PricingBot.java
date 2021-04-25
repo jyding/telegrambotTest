@@ -48,6 +48,18 @@ public class PricingBot extends TelegramLongPollingBot {
                     e.printStackTrace();
                 }
             });
+
+            if(update.getMessage().hasText() && update.getMessage().getText().contains("/info")){
+                SendMessage message = new SendMessage();
+                message.setChatId(update.getMessage().getChatId().toString());
+                String text = MessageParser.readLineByLine("src/main/resource/info.txt");
+                message.setText(text);
+                try {
+                    execute(message);
+                } catch (TelegramApiException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

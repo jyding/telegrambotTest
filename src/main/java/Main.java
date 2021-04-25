@@ -7,14 +7,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Register our bot
         try {
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
             botsApi.registerBot(new PricingBot());
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
-
 
     }
 }
