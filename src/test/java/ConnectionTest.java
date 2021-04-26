@@ -21,4 +21,9 @@ public class ConnectionTest {
         String message = MessageParser.readLineByLine("src/main/resource/info.txt");
         System.out.println(message);
     }
+
+    @Test
+    public void addToGroup(){
+        
+    }
 }
