@@ -12,6 +12,11 @@ import java.time.Duration;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
+
+/**
+ * Don't really need Selenium, will create TLDLib
+ * Selenium as a backup to that
+ */
 public class SeleniumTest {
 
     @Ignore

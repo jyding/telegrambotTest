@@ -12,6 +12,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+
+/**
+ * Practicing for an interview. Don't need Couchbase in particular
+ */
 public class DBTest {
 
     @Ignore
@@ -28,6 +32,7 @@ public class DBTest {
         System.out.println(name);
     }
 
+    @Ignore
     @Test
     public void getTokenFromDB() throws IOException {
         Properties prop = new Properties();

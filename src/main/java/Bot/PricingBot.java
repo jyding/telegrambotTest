@@ -30,6 +30,9 @@ public class PricingBot extends TelegramLongPollingBot {
 
         if (update.hasMessage() && update.getMessage().hasText()) {
 
+            /**
+             * Crpyto Pricing
+             */
             ArrayList<String> stockSymbols = MessageParser.getSymbols(update.getMessage().getText());
             stockSymbols.forEach(sym -> {
                 SendMessage message = new SendMessage();
@@ -49,6 +52,9 @@ public class PricingBot extends TelegramLongPollingBot {
                 }
             });
 
+            /**
+             * INFO Command
+             */
             if(update.getMessage().hasText() && update.getMessage().getText().contains("/info")){
                 SendMessage message = new SendMessage();
                 message.setChatId(update.getMessage().getChatId().toString());
@@ -60,6 +66,22 @@ public class PricingBot extends TelegramLongPollingBot {
                     e.printStackTrace();
                 }
             }
+
+            /**
+             * Website command: print https://t.me/sleepyslothfinance
+             */
+            if(update.getMessage().hasText() && update.getMessage().getText().contains("/website")){
+                SendMessage message = new SendMessage();
+                message.setChatId(update.getMessage().getChatId().toString());
+                String text = "https://t.me/sleepyslothfinance";
+                message.setText(text);
+                try {
+                    execute(message);
+                } catch (TelegramApiException e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
     }
 }
