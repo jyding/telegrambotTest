@@ -1,8 +1,8 @@
-package Bot;
+package Bot.BotImpl;
 
-import Http.CGClient;
-import Util.MessageGenerator;
-import Util.MessageParser;
+import Bot.Http.CGClient;
+import Bot.Util.MessageGenerator;
+import Bot.Util.MessageParser;
 import org.json.JSONObject;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -49,11 +49,45 @@ public class PricingBot extends TelegramLongPollingBot {
                 }
             });
 
+
             if(update.getMessage().hasText() && update.getMessage().getText().contains("/info")){
                 SendMessage message = new SendMessage();
                 message.setChatId(update.getMessage().getChatId().toString());
                 String text = MessageParser.readLineByLine("src/main/resource/info.txt");
                 message.setText(text);
+                try {
+                    execute(message);
+                } catch (TelegramApiException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if(update.getMessage().hasText() && update.getMessage().getText().contains("/website")){
+                SendMessage message = new SendMessage();
+                message.setChatId(update.getMessage().getChatId().toString());
+                message.setText("https://Sleepysloth.finance/");
+                try {
+                    execute(message);
+                } catch (TelegramApiException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if(update.getMessage().hasText() && update.getMessage().getText().contains("/chart")){
+                SendMessage message = new SendMessage();
+                message.setChatId(update.getMessage().getChatId().toString());
+                message.setText("https://poocoin.app/tokens/0x86432b9bea373172c852d5bbab1c275fec3f15ae");
+                try {
+                    execute(message);
+                } catch (TelegramApiException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if(update.getMessage().hasText() && update.getMessage().getText().contains("love you")){
+                SendMessage message = new SendMessage();
+                message.setChatId(update.getMessage().getChatId().toString());
+                message.setText("love u too baby");
                 try {
                     execute(message);
                 } catch (TelegramApiException e) {

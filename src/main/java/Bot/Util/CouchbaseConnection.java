@@ -1,9 +1,10 @@
-package Util;
+package Bot.Util;
 
 import com.couchbase.client.java.Cluster;
+import com.couchbase.client.java.Collection;
+import com.couchbase.client.java.kv.GetResult;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -18,6 +19,8 @@ public class CouchbaseConnection {
     }
 
     public String getToken(){
-        return "";
+        Collection collection = cluster.bucket("telegram_tokens").defaultCollection();
+        GetResult getResult = collection.get("token1");
+        return getResult.contentAsObject().getString("TOKEN");
     }
 }

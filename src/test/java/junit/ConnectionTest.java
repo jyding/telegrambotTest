@@ -1,10 +1,10 @@
-import Http.CGClient;
-import Util.MessageParser;
+package junit;
+
+import Bot.Http.CGClient;
+import Bot.Util.MessageParser;
 import org.junit.Assert;
 import org.junit.Test;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 public class ConnectionTest {
 
@@ -23,7 +23,7 @@ public class ConnectionTest {
     }
 
     @Test
-    public void addToGroup(){
-        
+    public void testUpdates(){
+
     }
 }

@@ -1,4 +1,4 @@
-package Util;
+package Bot.Util;
 
 import org.json.JSONObject;
 

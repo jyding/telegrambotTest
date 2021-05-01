@@ -4,10 +4,7 @@
 
 ❌ Imslothible to rug ❌
 
-$Sleepy Sloth is a Environmentally Charitible Frictionless Yield
-Farming Protocol that is designed to incentivize $Sleepy Sloth's
-to hold due to its burn & redistribution mechanism. Portions of
-every transaction will be pooled and donated to various charities.
+$Sleepy Sloth is a Environmentally Charitible Frictionless Yield Farming Protocol that is designed to incentivize $Sleepy Sloth's to hold due to its burn & redistribution mechanism. Portions of every transaction will be pooled and donated to various charities.
 
 Total Supply: 1,000,000,000,000,000 (One Quadrillion)
 🔓: 10% Liquidity locked for 1 year 🔓

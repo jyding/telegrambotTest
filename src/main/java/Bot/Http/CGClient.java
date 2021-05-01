@@ -1,4 +1,4 @@
-package Http;
+package Bot.Http;
 
 import org.json.JSONArray;
 import org.json.JSONException;
