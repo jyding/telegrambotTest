@@ -16,9 +16,9 @@ public class MessageGenerator {
 
     private final String priceMessageTemplate = " " +
             "\uD83D\uDCB0 Price [USD]: $ {price} \n" +
-            "  ⚖️  H: $0.168754 | L: $ {low}\n" +
-            "  ⚡️ Price [BTC]: {btc} \u20BF \n" +
-            "  ✨ Price [ETH]: {etc} Ξ\n" +
+            "  H: $0.168754 | L: $ {low}\n" +
+            "  Price [BTC]: {btc} \u20BF \n" +
+            "  Price [ETH]: {etc} \n" +
             "  {1h_emoji} 1h : {1h} \n" +
             "  {24h_emoji} 24h : {24h} \n" +
             "  {7d_emoji} 7d :{7d} \n" +

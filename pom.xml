@@ -10,6 +10,14 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.13</version>
+                <configuration>
+                    <repository>telegrambottest</repository>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -28,15 +36,11 @@
     </repositories>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.spotify/dockerfile-maven-plugin -->
         <dependency>
-            <groupId>it.tdlight</groupId>
-            <artifactId>tdlib-java</artifactId>
-            <version>4.171.100</version>
-        </dependency>
-        <dependency>
-            <groupId>it.tdlight</groupId>
-            <artifactId>tdlib-natives-linux-amd64</artifactId>
-            <version>3.3.28</version>
+            <groupId>com.spotify</groupId>
+            <artifactId>dockerfile-maven-plugin</artifactId>
+            <version>1.4.13</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
